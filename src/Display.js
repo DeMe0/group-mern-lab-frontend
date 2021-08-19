@@ -10,9 +10,14 @@ const Display = (props) => {
           <p id="title">{song.title}</p>
           <p id="artist">{song.artist}</p>
            <p id="time">{song.time}</p>
-          {/* <button onClick={() => {
+          <button onClick={() => {
             props.deleteSong(song)
-          }}>Delete</button>  */}
+          }}>Delete</button> 
+          <button onClick={() => {
+             console.log('cheese')
+             props.addToFavorites(song)
+          }}>Favorite</button>
+
         </article>
      ))}
         </div>
