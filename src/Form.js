@@ -17,8 +17,8 @@ const Form = (props) => {
   
     return (
       <form className ="form" onSubmit={handleSubmit}>
-        <h2>Favorite Song Lists</h2>
-        <p>song Artist Time</p>
+        
+        
         <h2>ADD A NEW SONG</h2>
         <label for="title">TITLE</label><br></br>
         <input

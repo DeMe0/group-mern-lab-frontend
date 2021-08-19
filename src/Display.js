@@ -13,6 +13,11 @@ const Display = (props) => {
           <button onClick={() => {
             props.deleteSong(song)
           }}>Delete</button> 
+          <button onClick={() => {
+             console.log('cheese')
+             props.addToFavorites(song)
+          }}>Favorite</button>
+
         </article>
      ))}
         </div>

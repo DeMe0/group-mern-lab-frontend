@@ -3,10 +3,12 @@ import { Route, Link} from "react-router-dom";
 import React, {useState, useEffect} from "react";
 import Display from './Display'
 import Form from './Form'
+import Favorite from './Favorites'
 
 function App() {
   const url = "https://group-mern-lab-628.herokuapp.com";
   const [songs,setSongs] =useState([])
+  const [favorite, setFavorite] = useState([])
   const getSongs = ()=>{ 
     fetch(url + "/songs")
     .then((response) => response.json())
@@ -31,6 +33,17 @@ function App() {
       getSongs()
     })
   }
+const handleUpdate = (songs) => {
+  fetch(url +'/songs/', + songs._id, {
+    method: 'put',
+    headers: {
+      'Constent-Type': 'application/json'
+    }
+  }) 
+}
+  const addToFavorites = (songs) => {  
+    setFavorite([...favorite, songs])
+  }
 
   const deleteSongs = (songs) => {
     fetch(url +'/songs/' +songs._id, {
@@ -40,6 +53,7 @@ function App() {
       getSongs()
     })
   }
+
 
   return (
     <div className="App">
@@ -51,10 +65,18 @@ function App() {
      <main>
      <h1>PLAYLIST 1</h1>  
      <Route exact path="/"
-            render={(rp) => <Display {...rp} songs={songs} deleteSong = {deleteSongs}
+            render={(rp) => <Display {...rp} songs={songs} deleteSong = {deleteSongs} addToFavorites = {addToFavorites}
             />}
     />
-      <Form   label='create' song={emptySong} handleSubmit={handleCreate}/>
+    <h2>Favorite Song Lists</h2>
+     <Route exact path="/"
+           render={(rp) =>  <Favorite   label='create' song={addToFavorites} favorite={favorite} handleSubmit={handleUpdate}/>}
+    />
+     <Route exact path="/"
+           render={(rp) =>  <Form   label='create' song={emptySong} handleSubmit={handleCreate}/>}
+    />
+    
+      
     
      
             
