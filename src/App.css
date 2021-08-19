@@ -1,17 +1,36 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Suez+One&display=swap');
+
+/* header and background */
+.App{
+  text-align: center;   
+  background-image: url("https://i.pinimg.com/originals/e9/f0/5b/e9f05ba4769d71862b6349a19bfb8a39.png") ;
+  opacity:0.75; 
+  background-size: cover;
+  min-height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.App .logo{
+ width:50%;
+ height:40%; 
+ margin-top: -7%;
+ margin-bottom: -8%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App hr{ 
+  border: 0;
+  width: 80%;
+  color:purple;
+  background-color:purple; 
+  height: 3px;
 }
+ 
+
 
 .App-header {
   background-color: #282c34;
@@ -27,6 +46,49 @@
 .App-link {
   color: #61dafb;
 }
+/* playlist-styling */
+.App h1{
+  font-family: 'Suez One', serif;
+  text-align: left;
+  margin-left:10%; 
+  font-size:25px; 
+}
+
+.playlist article{
+  margin-left:10%; 
+  margin-right:10%; 
+  display:flex; 
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* form styling */
+.form{
+  text-align:left; 
+  margin-left:10%; 
+}
+.form h2{
+  font-family: 'Arvo', serif;
+  font-size:25px;
+}
+
+.form p{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.form h1{
+  font-family: 'Suez One', serif;
+  text-align:left; 
+  margin-left:10%; 
+}
+
+.form input{ 
+  width:90%; 
+  height:25px; 
+  margin: 5px;
+}
+
+
 
 @keyframes App-logo-spin {
   from {
