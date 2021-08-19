@@ -8,7 +8,7 @@ const Form = (props) => {
     const handleSubmit = (event) => {
       event.preventDefault(); // Prevent Form from Refreshing
       props.handleSubmit(formData); // Submit to Parents desired function
-      props.history.push("/"); //Push back to display page
+      
     };
   
     const handleChange = (event) => {
@@ -24,22 +24,22 @@ const Form = (props) => {
         <input
           type="text"
           name="title"
-        //   value={formData.title}
-        //   onChange={handleChange}
+          value={formData.title}
+          onChange={handleChange}
         /><br></br>
         <label for="artist">ARTIST</label><br></br>
         <input
           type="text"
           name="artist"
-        //   value={formData.artist}
-        //   onChange={handleChange}
+          value={formData.artist}
+          onChange={handleChange}
         /><br></br>
           <label for="time">TIME</label><br></br>
         <input
           type="text"
           name="time"
-        //   value={formData.time}
-        //   onChange={handleChange}
+          value={formData.time}
+          onChange={handleChange}
         /><br></br>
        <button value={props.label}>ADD NEW SONG</button>
       </form>
