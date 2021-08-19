@@ -8,7 +8,7 @@
   background-size: cover;
   min-height: 100%;
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
 }
@@ -55,22 +55,59 @@
 }
 
 .playlist article{
-  margin-left:10%; 
-  margin-right:10%; 
-  display:flex; 
+  display: flex;
+  margin: 10%;
+  padding: 1em;
+  border: 2px black solid;
+  border-radius: 20px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.23012955182072825) 0%, rgba(93,93,93,1) 50%, rgba(0,0,0,0.20211834733893552) 100%);
   justify-content: space-between;
-  font-weight: bold;
+  box-shadow: 0 0px 10px 2px gray;
+
 }
+.playlist article p {
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+.playlist article button {
+  height: fit-content;
+}
+
+/* favorite line styling */ 
+div .songLine {
+    display: flex;
+    margin: 10%;
+    padding: 1em;
+    border: 2px black solid;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.23012955182072825) 0%, rgba(93,93,93,1) 50%, rgba(0,0,0,0.20211834733893552) 100%);
+    justify-content: space-between;
+    box-shadow: 0 0px 10px 2px gray;
+}
+    /* &:hover
+        box-shadow: 0 0px 80px 10px red */
+
+div .songLine p {
+  font-size: 10px;
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px black;
+}
+
+.songLinks 
+    text-decoration: none
+
 /* favorite styling */
-.Stephanie{
+.Stephanie {
   display: flex;
   margin: 1em;
   padding: 1em;
   border: 2px black solid;
   border-radius: 20px;
- 
   justify-content: space-between;
-
 }
 
 /* form styling */

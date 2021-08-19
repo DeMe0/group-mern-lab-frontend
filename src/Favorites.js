@@ -7,13 +7,13 @@ const Favorite = (props) => {
   
     return (
         <div className='Stephanie'>
-        {favorite.map((song) =>    <>
+        {favorite.map((song) =>    <div className="songLine">
            
               <p id="title">{song.title}</p>
               <p id="artist">{song.artist}</p>
                <p id="time">{song.time}</p>
            
-         </>
+         </div>
         )}
    </div>
     )};

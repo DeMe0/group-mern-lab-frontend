@@ -1,4 +1,6 @@
 import React from "react";
+import { ImCross } from 'react-icons/im';
+import { ImHeart } from 'react-icons/im';
 
 const Display = (props) => {
     const { songs } = props;
@@ -12,11 +14,11 @@ const Display = (props) => {
            <p id="time">{song.time}</p>
           <button onClick={() => {
             props.deleteSong(song)
-          }}>Delete</button> 
+          }}><ImCross/></button> 
           <button onClick={() => {
              console.log('cheese')
              props.addToFavorites(song)
-          }}>Favorite</button>
+          }}><ImHeart /></button>
 
         </article>
      ))}
